@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Feasibility Report: Green Haven Cafe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Prompt', sans-serif; background-color: #f4f7f6; }
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 350px; max-height: 400px; }
+        @media (max-width: 768px) { .chart-container { height: 300px; } }
+        .swot-card { transition: transform 0.2s; }
+        .swot-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-teal-800 mb-4">Project Feasibility Analysis</h1>
+            <p class="text-xl text-teal-600 font-medium">ร้านคาเฟ่ Green Haven (กระบี่)</p>
+            <div class="mt-4 inline-block bg-teal-100 text-teal-800 px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
+                Prepared by Startup/SME Consultant
+            </div>
+        </header>
+
+        <section class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-8 border-t-8 border-yellow-500">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-3xl mr-3">⚖️</span> Executive Summary & Verdict
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-4 text-gray-700">
+                    <p>จากการประเมินข้อมูลเบื้องต้น โครงการ <strong>Green Haven Cafe</strong> อยู่ในสถานะ <span class="text-yellow-600 font-bold">"กำลังก่อสร้าง"</span> ซึ่งหมายความว่ามี Sunk Cost (ต้นทุนจม) เกิดขึ้นแล้ว การยกเลิกโครงการตอนนี้จะทำให้สูญเสียเงินลงทุนทันที ดังนั้นคำตัดสินคือ <strong>GO (เดินหน้าต่อ) แต่ต้อง "ปรับกลยุทธ์อย่างเร่งด่วน (Conditional Go)"</strong></p>
+                    <p>จุดอ่อนที่อันตรายที่สุดตอนนี้คือ <strong>"การไม่มีโครงสร้างราคาและยังไม่รู้คู่แข่ง"</strong> การพึ่งพาลูกค้ารีสอร์ต (Captive Audience) เป็นข้อได้เปรียบ แต่จะไม่เพียงพอที่จะครอบคลุมต้นทุน Fix Cost ในช่วง Low Season ของกระบี่ ส่วนการฝากความหวังไว้กับ Delivery App มีความเสี่ยงสูงจาก GP 30-35% และการแข่งขันที่ดุเดือด</p>
+                    <p>จุดเด่นเรื่องเมล็ดกาแฟจาก <strong>23 Roaster Cafe Krabi</strong> เป็น Local Storytelling ที่ดี แต่ต้องบวกกับ "Experience" ของร้านจึงจะดึงดูดลูกค้าภายนอกได้</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center flex flex-col justify-center">
+                    <span class="text-sm text-gray-500 uppercase tracking-wider font-bold mb-2">Consultant Verdict</span>
+                    <span class="text-4xl font-black text-yellow-500 mb-2">CONDITIONAL GO</span>
+                    <span class="text-gray-600 text-sm">เดินหน้าต่อ แต่ห้ามเปิดร้านจนกว่าจะทำ Pricing Structure และ Customer Acquisition Plan เสร็จ</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            
+            <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-teal-800 mb-4">1. Demand & Target Market</h2>
+                <p class="text-gray-600 mb-6 text-sm">โครงสร้างลูกค้าของร้านคาเฟ่ในรีสอร์ตจะต้องแบ่งเป็น 2 กลุ่มหลัก เพื่อกระจายความเสี่ยงในช่วงที่อัตราการเข้าพักต่ำ</p>
+                <div class="chart-container">
+                    <canvas id="targetMarketChart"></canvas>
+                </div>
+                <div class="mt-4 p-4 bg-teal-50 rounded-lg text-sm text-teal-900 border border-teal-100">
+                    <strong>Insight:</strong> ลูกค้าพักในรีสอร์ตคือ "Cash Cow" ที่ยอมจ่ายในราคาสูงแลกกับความสะดวกสบาย ส่วนกลุ่ม Delivery คือตัวช่วยสร้างกระแสเงินสดและระบายวัตถุดิบในช่วง Low Season
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-teal-800 mb-4">2. Competitor Analysis (Krabi)</h2>
+                <p class="text-gray-600 mb-6 text-sm">การเปรียบเทียบศักยภาพการแข่งขันในพื้นที่กระบี่/อ่าวนาง ระหว่าง Green Haven และคู่แข่งหลัก</p>
+                <div class="chart-container">
+                    <canvas id="competitorRadarChart"></canvas>
+                </div>
+                <div class="mt-4 p-4 bg-gray-50 rounded-lg text-sm text-gray-700 border border-gray-200">
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><strong>Specialty Cafe ท้องถิ่น:</strong> จุดแข็งคือแบรนด์และบาริสต้า (คู่แข่งกลุ่ม Delivery)</li>
+                        <li><strong>คาเฟ่รีสอร์ตอื่นๆ:</strong> คู่แข่งทางอ้อม แข่งขันด้านบรรยากาศและราคา</li>
+                        <li><strong>Chain Store (Amazon ฯลฯ):</strong> ได้เปรียบเรื่องราคาที่เข้าถึงง่ายและความคุ้นเคย</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-8">
+            <h2 class="text-2xl font-bold text-teal-800 mb-6">3. Pricing Strategy & Unit Economics (ข้อเสนอแนะ)</h2>
+            <p class="text-gray-700 mb-8">เนื่องจากกลุ่มลูกค้าหลักคือ "ฝรั่งที่พักในรีสอร์ต" การตั้งราคาควรอยู่ในระดับ Premium Resort Pricing (Standard + 20%) แต่ต้องมี Margin ที่เพียงพอสำหรับจ่ายค่า GP Delivery 30% โดยไม่ขาดทุน</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="chart-container">
+                    <canvas id="pricingChart"></canvas>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-3">คำแนะนำการตั้งราคา (Pricing Tactics)</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white border-l-4 border-green-500 shadow-sm p-4">
+                            <h4 class="font-bold text-green-700">Dine-in / Resort Guests</h4>
+                            <p class="text-sm text-gray-600 mt-1">ตั้งราคาพรีเมียมได้ (เช่น Americano 90-110 บาท) แต่ต้องเสริมบริการเชียร์ขายคู่ (Cross-sell) กับอาหารเช้า หรือมี Welcome Drink เพื่ออัปเซลล์</p>
+                        </div>
+                        <div class="bg-white border-l-4 border-orange-500 shadow-sm p-4">
+                            <h4 class="font-bold text-orange-700">Delivery Apps (Grab/Foodpanda)</h4>
+                            <p class="text-sm text-gray-600 mt-1">ตั้งราคาเผื่อ GP 30-35% (เช่น หน้าแอป 120 บาท) แนะนำให้ทำ "Set Promotion" (กาแฟ + เบเกอรี่) เพื่อเพิ่ม Ticket Size ให้คุ้มค่าจัดส่งและ GP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 px-2">4. SWOT & Risk Analysis</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="swot-card bg-green-50 rounded-xl p-6 border-t-4 border-green-500 shadow-sm">
+                    <div class="text-green-600 font-black text-xl mb-2 flex items-center">
+                        <span class="text-2xl mr-2">S</span>trengths
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-2 list-none">
+                        <li>✅ มี Captive Market (แขกในรีสอร์ต)</li>
+                        <li>✅ ลดต้นทุนค่าเช่าที่ (ใช้พื้นที่รีสอร์ต)</li>
+                        <li>✅ ใช้เมล็ดกาแฟ Local Premium (23 Roaster) สร้าง Story ได้</li>
+                    </ul>
+                </div>
+
+                <div class="swot-card bg-red-50 rounded-xl p-6 border-t-4 border-red-500 shadow-sm">
+                    <div class="text-red-600 font-black text-xl mb-2 flex items-center">
+                        <span class="text-2xl mr-2">W</span>eaknesses
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-2 list-none">
+                        <li>⚠️ ขาดข้อมูลคู่แข่งและตลาดที่ชัดเจน</li>
+                        <li>⚠️ ยังไม่มีโครงสร้างราคาที่ทำกำไรได้จริง</li>
+                        <li>⚠️ พึ่งพาลูกค้าฝรั่งมากเกินไป (เสี่ยงช่วง Low Season)</li>
+                    </ul>
+                </div>
+
+                <div class="swot-card bg-blue-50 rounded-xl p-6 border-t-4 border-blue-500 shadow-sm">
+                    <div class="text-blue-600 font-black text-xl mb-2 flex items-center">
+                        <span class="text-2xl mr-2">O</span>pportunities
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-2 list-none">
+                        <li>💡 เทรนด์ Eco-Tourism & Wellness ในกระบี่</li>
+                        <li>💡 การทำ Package ผูกกับค่าห้องพัก (Room + Daily Coffee)</li>
+                        <li>💡 จัดเวิร์กชอปดริปกาแฟเล็กๆ ให้แขก</li>
+                    </ul>
+                </div>
+
+                <div class="swot-card bg-yellow-50 rounded-xl p-6 border-t-4 border-yellow-500 shadow-sm">
+                    <div class="text-yellow-600 font-black text-xl mb-2 flex items-center">
+                        <span class="text-2xl mr-2">T</span>hreats
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-2 list-none">
+                        <li>🔥 Low Season (หน้าฝนกระบี่) ยอดขายตกกระฮวบ</li>
+                        <li>🔥 สงครามราคาใน Delivery App</li>
+                        <li>🔥 ต้นทุนแฝงจากการก่อสร้างที่อาจบานปลาย</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800 text-white rounded-2xl shadow-xl p-6 md:p-10">
+            <h2 class="text-2xl font-bold mb-6 text-teal-400">5. Survival Action Plan (สิ่งที่ต้องทำด่วน)</h2>
+            <div class="space-y-4">
+                
+                <div class="flex items-start bg-gray-700 rounded-lg p-4">
+                    <div class="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0 mt-1">1</div>
+                    <div class="ml-4">
+                        <h4 class="font-bold text-lg text-teal-300">ทำ Menu Costing (คำนวณต้นทุนต่อแก้ว)</h4>
+                        <p class="text-sm text-gray-300 mt-1">คำนวณต้นทุนวัตถุดิบ (เมล็ดกาแฟ นม แก้ว ฝา หลอด) ให้ชัดเจน ราคาขายต้องได้ Gross Margin อย่างน้อย 65-70% สำหรับหน้าร้าน และ 75%+ สำหรับเมนู Delivery</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start bg-gray-700 rounded-lg p-4">
+                    <div class="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0 mt-1">2</div>
+                    <div class="ml-4">
+                        <h4 class="font-bold text-lg text-teal-300">ออกแบบ Signature Drink (ที่หาที่อื่นไม่ได้)</h4>
+                        <p class="text-sm text-gray-300 mt-1">การดึงคนจาก Delivery ต้องมีภาพที่สวย และเมนูที่แปลกใหม่ เช่น กาแฟผสมผลไม้ท้องถิ่น หรือชาสกัดเย็นที่เหมาะกับอากาศร้อน เพื่อใช้โปรโมทหน้าร้านใน Google Maps</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start bg-gray-700 rounded-lg p-4">
+                    <div class="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold shrink-0 mt-1">3</div>
+                    <div class="ml-4">
+                        <h4 class="font-bold text-lg text-teal-300">วางแผนการตลาด Google My Business</h4>
+                        <p class="text-sm text-gray-300 mt-1">ลูกค้าฝรั่ง 90% ค้นหาร้านกาแฟผ่าน Google Maps ต้องเตรียมถ่ายรูปเมนูสวยๆ ปักหมุดให้ชัดเจน และขอรีวิวจากแขกที่พักในวิลล่าตั้งแต่วันแรกที่เปิดร้าน</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const chartColors = {
+            teal: '#0d9488',
+            lightTeal: '#5eead4',
+            yellow: '#eab308',
+            orange: '#f97316',
+            gray: '#9ca3af',
+            darkGray: '#374151',
+            red: '#ef4444'
+        };
+
+        const globalTooltipConfig = {
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) {
+                            return label.join(' ');
+                        } else {
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const ctxTarget = document.getElementById('targetMarketChart').getContext('2d');
+        new Chart(ctxTarget, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    ['แขกที่พัก', 'ในรีสอร์ต', '(Captive)'], 
+                    ['ลูกค้าสั่งผ่าน', 'Delivery App'], 
+                    ['นักท่องเที่ยว', 'Walk-in']
+                ],
+                datasets: [{
+                    data: [60, 30, 10],
+                    backgroundColor: [chartColors.teal, chartColors.orange, chartColors.yellow],
+                    borderWidth: 2,
+                    borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    ...globalTooltipConfig,
+                    legend: { position: 'right' }
+                },
+                cutout: '65%'
+            }
+        });
+
+        const ctxRadar = document.getElementById('competitorRadarChart').getContext('2d');
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: [
+                    ['ความสะดวก', '(ลูกค้าในรีสอร์ต)'], 
+                    ['คุณภาพเมล็ด', '(23 Roaster)'], 
+                    ['ความสามารถ', 'ตั้งราคาสูง'], 
+                    ['การเข้าถึง', 'ผ่าน Delivery'], 
+                    ['บรรยากาศ', 'และการตกแต่ง']
+                ],
+                datasets: [
+                    {
+                        label: 'Green Haven (เป้าหมาย)',
+                        data: [9, 8, 7, 5, 8],
+                        backgroundColor: 'rgba(13, 148, 136, 0.2)',
+                        borderColor: chartColors.teal,
+                        pointBackgroundColor: chartColors.teal,
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Specialty Cafe ในเมือง',
+                        data: [4, 9, 8, 9, 9],
+                        backgroundColor: 'rgba(249, 115, 22, 0.2)',
+                        borderColor: chartColors.orange,
+                        pointBackgroundColor: chartColors.orange,
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'ร้านกาแฟ Chain Mass',
+                        data: [6, 6, 9, 8, 6],
+                        backgroundColor: 'rgba(156, 163, 175, 0.2)',
+                        borderColor: chartColors.gray,
+                        pointBackgroundColor: chartColors.gray,
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        min: 0,
+                        max: 10,
+                        ticks: { stepSize: 2 }
+                    }
+                },
+                plugins: {
+                    ...globalTooltipConfig,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        const ctxPricing = document.getElementById('pricingChart').getContext('2d');
+        new Chart(ctxPricing, {
+            type: 'bar',
+            data: {
+                labels: [
+                    ['กาแฟดำ', '(Americano)'], 
+                    ['กาแฟนม', '(Latte/Capp)'], 
+                    ['Signature', 'Drink']
+                ],
+                datasets: [
+                    {
+                        label: 'ต้นทุนประเมิน (COGS)',
+                        data: [25, 35, 45],
+                        backgroundColor: chartColors.gray,
+                        stack: 'Stack 0'
+                    },
+                    {
+                        label: 'กำไรขั้นต้น (Dine-in)',
+                        data: [65, 75, 105],
+                        backgroundColor: chartColors.teal,
+                        stack: 'Stack 0'
+                    },
+                    {
+                        label: 'หัก GP Delivery (30%)',
+                        data: [-27, -33, -45],
+                        backgroundColor: chartColors.red,
+                        stack: 'Stack 1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: { stacked: true },
+                    y: { 
+                        stacked: false,
+                        title: { display: true, text: 'ราคา (บาท)' }
+                    }
+                },
+                plugins: {
+                    ...globalTooltipConfig,
+                    legend: { position: 'top' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
